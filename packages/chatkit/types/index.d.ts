@@ -1157,6 +1157,12 @@ export type ChatKitEvents = {
   /** Emitted when the assistant finishes sending a response. */
   'chatkit.response.end': CustomEvent<void>;
 
+  /** Emitted when the history view opens. */
+  'chatkit.history.open': CustomEvent<void>;
+
+  /** Emitted when the history view closes. */
+  'chatkit.history.close': CustomEvent<void>;
+
   /** Emitted when the active thread changes. Use this along with `initialThread` to persist the current thread across page loads or sessions. */
   'chatkit.thread.change': CustomEvent<{ threadId: string | null }>;
 
