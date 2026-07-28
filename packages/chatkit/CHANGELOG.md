@@ -1,5 +1,11 @@
 # @openai/chatkit
 
+## 1.8.0
+
+### Minor Changes
+
+- a0c1fae: Add history open and close events and React event handlers.
+
 ## 1.7.0
 
 ### Minor Changes
