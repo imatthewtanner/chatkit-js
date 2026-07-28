@@ -21,6 +21,8 @@ const EVENT_HANDLER_MAP: {
   [K in keyof ChatKitEvents]: ToEventHandlerKey<K>;
 } = {
   'chatkit.error': 'onError',
+  'chatkit.history.close': 'onHistoryClose',
+  'chatkit.history.open': 'onHistoryOpen',
   'chatkit.response.end': 'onResponseEnd',
   'chatkit.response.start': 'onResponseStart',
   'chatkit.log': 'onLog',
