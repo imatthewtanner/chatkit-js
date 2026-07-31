@@ -1,5 +1,11 @@
 # @openai/chatkit
 
+## 1.9.0
+
+### Minor Changes
+
+- ad5eaa5: Add `ChatKitOptions.commands` for configuring the composer command menu.
+
 ## 1.8.0
 
 ### Minor Changes

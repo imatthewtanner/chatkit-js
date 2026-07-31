@@ -1,5 +1,13 @@
 # @openai/chatkit-react
 
+## 1.6.1
+
+### Patch Changes
+
+- ad5eaa5: Add `ChatKitOptions.commands` for configuring the composer command menu.
+- Updated dependencies [ad5eaa5]
+  - @openai/chatkit@1.9.0
+
 ## 1.6.0
 
 ### Minor Changes
