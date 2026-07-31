@@ -110,6 +110,13 @@ export type ChatKitOptions = {
   entities?: EntitiesOption;
 
   /**
+   * Configuration for the composer command menu.
+   *
+   * @see {@link CommandsOption}
+   */
+  commands?: CommandsOption;
+
+  /**
    * Configuration for widgets.
    *
    * @see {@link WidgetsOption}
@@ -231,6 +238,22 @@ export type EntitiesOption = {
   onRequestPreview?: (
     entity: Entity,
   ) => Promise<{ preview: Widgets.BasicRoot | null }>;
+};
+
+export type CommandsOption = {
+  /**
+   * Enables the "/" command menu, including applicable built-in composer actions.
+   */
+  enabled: boolean;
+
+  /** Returns integration-defined commands matching the input query. */
+  onSearch?: (query: string) => Promise<Command[]>;
+
+  /**
+   * Runs a command. Return an entity to insert it, another menu to continue
+   * command selection, or nothing when the command only performs an effect.
+   */
+  onSelect?: (command: Command) => Promise<void | CommandSelection>;
 };
 
 export type DisclaimerOption = {
@@ -596,6 +619,25 @@ export type Entity = {
   data?: Record<string, string>;
   // Later: optional entity-specific tag display options (e.g. tag prefix)
 };
+
+/**
+ * An action that can be found from the composer's command menu.
+ */
+export type Command = {
+  id: string;
+  label: string;
+  description?: string;
+  icon?: ChatKitIcon;
+  group?: string;
+};
+
+/**
+ * Determines what ChatKit inserts or displays after a command is selected.
+ * Returning no selection lets the integration perform an effect outside ChatKit.
+ */
+export type CommandSelection =
+  | { type: 'entity'; entity: Entity }
+  | { type: 'menu'; commands: Command[] };
 
 /**
  * Identifies the tool that should run for a single message submission.
