@@ -88,6 +88,31 @@ Just add the ChatKit component, give it a client token, and customize the chat e
 - [Starter app](https://github.com/openai/openai-chatkit-starter-app) - Clone a repo to start with a fully working template
 - [Samples](https://github.com/openai/openai-chatkit-advanced-samples) - See working examples of ChatKit and get inspired
 
+## OpenCode API client
+
+This repo also ships `opencode-api.js`, a dependency-free Node script (Node 22+, built-in `fetch`) that drives a local OpenCode service over its raw HTTP API — create a session, send a prompt, and print the assistant's reply. It's not part of the workspace build; run it straight from the repo root.
+
+```bash
+# One-shot: create a session in the current directory, prompt, print the reply
+node opencode-api.js "Summarize this repo in one sentence"
+
+# Inspect the running service (/api/info)
+node opencode-api.js --info
+
+# Point at a non-standard service URL
+node opencode-api.js --server http://127.0.0.1:49374 "Hello"
+```
+
+How it works:
+
+- Reads the service endpoint and secret from `~/.local/state/opencode/service.json` and authenticates with HTTP Basic (`opencode:<password>`).
+- `POST /api/session` `{ location: { directory } }` creates a session; `POST /api/session/{id}/prompt` `{ text }` queues your message (async); `GET /api/session/{id}/message` is polled until an `idle` message with `outcome: "succeeded"` signals completion.
+
+Environment overrides:
+
+- `OPENCODE_SERVICE_FILE` — alternate path to the service registration JSON.
+- `OPENCODE_SERVER_URL` — override the service base URL (equivalent to `--server`).
+
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE).
