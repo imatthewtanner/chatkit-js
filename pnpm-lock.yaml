@@ -37,7 +37,7 @@ importers:
         version: 16.5.0
       prettier:
         specifier: ^3.6.2
-        version: 3.9.8
+        version: 3.9.9
       rimraf:
         specifier: ^6.0.0
         version: 6.1.3
@@ -99,8 +99,8 @@ importers:
         specifier: ^0.6.0
         version: 0.6.1(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)))(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1))
       starlight-theme-next:
-        specifier: ^0.3.2
-        version: 0.3.3(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)))
+        specifier: ^0.4.0
+        version: 0.4.0(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)))
       starlight-typedoc:
         specifier: ^0.21.3
         version: 0.21.5(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)))(typedoc-plugin-markdown@4.13.1(typedoc@0.28.20(typescript@5.9.3)))(typedoc@0.28.20(typescript@5.9.3))
@@ -3659,8 +3659,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.9.8:
-    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4011,11 +4011,11 @@ packages:
       '@astrojs/starlight': '>=0.31'
       astro: ^5.15.9
 
-  starlight-theme-next@0.3.3:
-    resolution: {integrity: sha512-V8+tSvbSZKopt1nG5vEnoFiEEc6xqs11Ombbd0awUfm+OzU4+mZOK0VtuZxBTWZduwX3MbmB8j7f+o0GyH22Xw==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+  starlight-theme-next@0.4.0:
+    resolution: {integrity: sha512-rIHrl9xZSITamEnBSqmTWdHWSp44Tx5zDpME3SBoONuD2diq0HxVKP4f9atq5QB01NIzulpFSkDRUkzl/L3Cow==}
+    engines: {node: '>=22.12.0'}
     peerDependencies:
-      '@astrojs/starlight': '>=0.34'
+      '@astrojs/starlight': '>=0.38'
 
   starlight-typedoc@0.21.5:
     resolution: {integrity: sha512-7JGaPHrP+HgX0sYGnafZcPuzMm+3OmHx7kqE0DWTrsuBfoQS02lJ6/PtJF9y0KCDcfsBynyo0G/1ttHcBq5Vww==}
@@ -8696,7 +8696,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.9.8: {}
+  prettier@3.9.9: {}
 
   prismjs@1.30.0: {}
 
@@ -9245,7 +9245,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  starlight-theme-next@0.3.3(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1))):
+  starlight-theme-next@0.4.0(@astrojs/starlight@0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1))):
     dependencies:
       '@astrojs/starlight': 0.35.3(astro@5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.4)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1))
 
